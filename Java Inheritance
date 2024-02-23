@@ -1,0 +1,81 @@
+import java.util.Scanner;
+abstract class Sports{
+   String name;
+    void showData(){
+        System.out.println("I love to play sports.");
+    }
+    //abstract int toss(String team1, String team2);
+    
+    Sports(){
+        System.out.println("I am a sports constructor");
+    }
+    abstract void hello();
+    //The above line declares a method w/out body, hence must be declared as abstract
+    // A solution would be to define this in all extention classes. Which are inherited DIRECTLY, not indirectly. 
+}
+class Indoor extends Sports{
+    private boolean net;
+    final void showData(){
+        System.out.println("I play indoor sports."); 
+    }
+    Indoor(){
+        System.out.println("I am a Indoor constructor");
+    }
+    void hello(){
+        System.out.println("test");
+    }
+    final void winner_c(){
+        System.out.println("winner is me");
+    
+
+    }
+}
+//This class is declared as final to state inheritance cannot occur any further.
+class Outdoor extends Sports{
+    //Final does not allow extention classes,
+    private boolean Field;
+    private double Length, Width;
+    //void showData(){
+        //System.out.println("I love outdoor sports."); 
+    //}
+    Outdoor(){
+        System.out.println("I am a Outdoor constructor");
+}
+    void hello(){
+        System.out.println("test");
+    }
+}
+class Chess extends Indoor{
+    String piece_question;
+    void showData(){
+        System.out.println("My favorite piece is the rook, what is yours?");
+        Scanner Sportsobj = new Scanner(System.in);
+        piece_question = Sportsobj.nextLine();
+        System.out.println("You're favourtie piece is the,"+ piece_question);
+}
+}
+class Football extends Outdoor{
+}
+public class Main {
+    public static void main(String games[]){
+        final int a;
+        //Final variable must be assigned only once.
+        Outdoor obj=new Outdoor();
+        Indoor obj1=new Indoor();
+        Chess obj2=new Chess();
+        //Sports obj3=new Sports();
+        obj1.showData();
+        obj.showData();
+        obj2.showData();
+        //obj3.showData();
+        obj1.winner_c();
+        obj2.hello();
+        a=2;
+        a=3;
+    }
+    
+}
+
+// hybrid inheritance as hierarchical, multilevel and hybrid are all apllicable in one code.
+// When child class has its own showData compilier uses its own class method, if not it uses parents.
+//Abstract keyword means that a class becomes abstract meaning the class is now unable to create objects. not able to be instantiated.
