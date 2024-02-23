@@ -1,0 +1,33 @@
+//Title: Lesson 2 wages Program
+//Author: Rohan Kaushik
+//Date: 2/1/2024
+//Determine the wages of two employees and state how much they earn in a week
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in); 
+    // ask hourly wage 1
+   System.out.println("Enter the hourly wage of the first employee: ");
+    double wage1 = sc.nextDouble();
+// ask hourly wage 2
+    System.out.println("Enter the number of hours worked by the first employee: ");
+    double hours1 = sc.nextDouble();
+//ask # of hours worked by 1st employee
+    System.out.println("Enter the number of hours worked by the second employee: ");
+    double wage2 = sc.nextDouble();
+//ask # of hours worked by 2nd employee
+    System.out.println("Enter the number of hours worked by the second employee: ");
+    double hours2 = sc.nextDouble();
+
+    double total1 = wage1 * hours1; // finding weekly wages
+    double total2 = wage2 * hours2;// finding weekly wages of second employee
+    System.out.println("The first employee earned " + total1 + " dollars this week.");
+    System.out.println("The Hourly wage of the first employee is " + wage1 + " dollars per hour.");
+    System.out.println("The number of hours worked by the first employee is " + hours1 + " hours.");
+    System.out.println("--------------------------------------------------");
+      System.out.println("The second employee earned " + total2 + " dollars this week.");
+    System.out.println( "The Hourly wage of the second employee is " + wage2 + " dollars per hour.");
+    System.out.println("The number of hours worked by the second employee is " + hours2 + " hours.");
+      
+  }
+}
