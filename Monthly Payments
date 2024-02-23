@@ -1,0 +1,19 @@
+//Monthly Payment
+//Rohan Kaushik
+//2/7/24
+//Write a program to compute and display the monthly payment display ouputs rounded to decimal places. We will receive a value for each of the first three inputs. of 130, 8.6% and 12
+
+import java.text.DecimalFormat;
+
+class Main {
+  public static void main(String[] args) {
+    DecimalFormat dForm = new DecimalFormat("0.00");
+    final int unpaidBalance = 130; // unpaid loan
+    final double financeCharge = 8.6; //interest charge
+    final int mPayment = 12; //Months of payment
+    double interestCharge = (financeCharge / 100);
+    double mPaymentAmount = (unpaidBalance * (1+interestCharge) / mPayment); // calculates amount of money paid per month
+    System.out.println("The monthly payment is $" + dForm.format(mPaymentAmount));
+  
+  }
+}
