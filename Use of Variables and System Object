@@ -1,0 +1,38 @@
+//Sale and Profit Amount
+// Rohan Kaushik
+//2/2/24
+//Input the cost price and percent markup and output the sale price and profit  
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    DecimalFormat dForm = new DecimalFormat("0.00");
+    double cPrice = 0;     // Cost 
+    double profit = 0;     // Profit 
+    double markup = 0;     // Markup
+    double sPrice = 0;     // Sale price 
+
+    //  Cost Price
+    System.out.println("Enter the cost price: ");
+    cPrice = sc.nextDouble();
+
+    //  Markup Cost
+    System.out.println("Enter the markup percentage: ");
+    markup = sc.nextDouble();
+
+    //  Sale Price
+    sPrice = (cPrice + (cPrice * markup / 100));
+    System.out.println("Sale Price is: " + dForm.format(sPrice));
+    // Profit
+    profit = (sPrice - cPrice);
+    System.out.println("Profit is : " + dForm.format(profit));
+  }
+}
+
+
+    
+
+
+
